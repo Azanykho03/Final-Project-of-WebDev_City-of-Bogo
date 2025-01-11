@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogo City - Redesign</title>
+
+    <!-- Font Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link href="assets/img/icons/bogo-city-icon.png" rel="icon">
+    
+    <!-- Library CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head> 
+<body>
+    <!-- Header Section -->
+    <header>
+    
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-expand-lg fixed-top ">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/icons/bogo-city-icon.png" alt="Bogo City logo" style="height: 35px; width: auto;">
+                    City of Bogo
+                </a>
+    
+                <!-- Navbar toggler for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Offcanvas Menu -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="notice-of-payment.html">Notice of Payment</a></li>
+                                    <li><a class="dropdown-item" href="Business_Permit.html">Business Permit 
+                                            </a></li>
+                                    <li><a class="dropdown-item" href="Building_Requirements.html">Building Permit</a></li>
+                                    <li><a class="dropdown-item" href="Tax-Declaration.html">Tax Declaration</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Transparency
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="annual-budget.html">Annual Budget</a></li>
+                                    <li><a class="dropdown-item" href="quarterly-budget.html">Quarterly Budget</a></li>
+                                    <li><a class="dropdown-item" href="local-government-support-fund.html">LGSF</a></li>
+                                    <li><a class="dropdown-item" href="policies.html">Policies</a></li>
+                                    <li><a class="dropdown-item" href="bayanihan-grant-utilization.html">Bayanihan Grant
+                                            Utilization</a></li>
+                                    <li><a class="dropdown-item" href="dole-camp.html">Dole Camp</a></li>
+    
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="events.html">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigation Section -->
+    
+    </header>
+    <!-- Header Section -->
+    
+    
+    <!-- Main Section -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero section dark-background">
+
+        <div class="hero-background">
+            <video autoplay muted loop playsinline>
+                <source src="assets/videos/bogo_city_hero_bg.mp4" type="video/mp4">
+                <!-- You can add more source elements for different video formats -->
+            </video>
+        </div>
+        
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out"
+                        data-aos-duration="1000" data-aos-delay="50">
+                        <h1>
+                            Welcome to the <br>
+                            <span id="animated-text" style="font-weight: bold;" data-aos="fade-up" data-aos-delay="200">
+                                City of Bogo
+                            </span>
+                        </h1>
+                        <p data-aos="fade-up" data-aos-delay="200">
+                            Together, we build a brighter Bogo. Let's <br> unite for progress and change.
+                        </p>
+                        <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+                            <a href="https://www.facebook.com/lgubogo" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="https://x.com/cityofbogocebu" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="https://www.instagram.com/cityofbogocebu/" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UC-ZND2YumdMRTEzmUxnQWjA" class="youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                        <div class="d-flex" data-aos="fade-up" data-aos-delay="500">
+                            <a href="#about-us" class="btn-learn-more">Learn More</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section -->
+
+
+
+        <!-- About Us Section -->
+        <section id="about-us" class="section">
+            <div class="container section-heading" data-aos="fade-up">
+                <h2 class="section-title">About Us</h2>
+                <p><span>Who are we? </span> <span class="sub-title">Discover our mission and vision.</span></p>
+            </div>
+        
+            <div class="container-xxl">
+                <div class="container">
+                    <div class="row g-4 about-section">
+                        <div class="col-lg-6 about-image-container" data-aos="fade-right" data-aos-delay="100">
+                            <img class="img-fluid rounded" src="assets/img/uploads/Bogo City Hall Facade Jan 17 2023.jpg"
+                                alt="Bogo City Hall Facade">
+                        </div>
+                        <div class="col-lg-6 content-container" data-aos="fade-left" data-aos-delay="300">
+                            <p class="mb-4">Nestled in the northern part of Cebu, Bogo City is a vibrant community
+                                dedicated to preserving its natural beauty,
+                                promoting sustainable agriculture, and protecting the rich marine ecosystem that
+                                surrounds our coastal municipality.
+                            </p>
+                            <div class="border rounded p-4">
+                                <nav>
+                                    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                                        <button class="nav-link fw-semi-bold active" id="nav-story-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-story" type="button" role="tab" aria-controls="nav-story"
+                                            aria-selected="true">About</button>
+                                        <button class="nav-link fw-semi-bold" id="nav-mission-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-mission" type="button" role="tab" aria-controls="nav-mission"
+                                            aria-selected="false">Mission</button>
+                                        <button class="nav-link fw-semi-bold" id="nav-vision-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-vision" type="button" role="tab" aria-controls="nav-vision"
+                                            aria-selected="false">Vision</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-story" role="tabpanel"
+                                        aria-labelledby="nav-story-tab">
+                                        <p>Bogo City is a progressive municipality known
+                                            for its agricultural productivity, beautiful coastlines, and
+                                            strong community spirit. We are committed to balancing economic
+                                            development with environmental conservation.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-mission" role="tabpanel"
+                                        aria-labelledby="nav-mission-tab">
+                                        <p>To emerge as a model of sustainable urban
+                                            development in Cebu, where environmental protection,
+                                            community well-being, and economic progress coexist harmoniously, creating a
+                                            prosperous future for generations to come.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
+                                        <p>To foster sustainable development that protects
+                                            our natural resources, supports local agriculture, and creates
+                                            economic opportunities for our residents while preserving the unique
+                                            ecological heritage of northern Cebu.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="about-us.html" class="read-more-link">
+                                    Read More <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Us Section -->
+
+
+
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section dark-background">
+            <!-- Animated Image -->
+            <div class="image-container" data-aos="fade-in" data-aos-duration="1200">
+                <img src="assets/img/uploads/the-santo-nio-de-cebu-and-its-pagan-origins.jpg"
+                    alt="The Santo Niño de Cebu and Its Pagan Origins" class="img-fluid">
+            </div>
+        
+            <div class="container">
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-xl-10">
+                        <div class="quote-box text-center" data-aos="zoom-in" data-aos-delay="300">
+                            <h3 data-aos="fade-up" data-aos-delay="400">Announcement from the City Mayor</h3>
+                            <blockquote data-aos="fade-up" data-aos-delay="500">
+                                <p>
+                                    "This decision came easy for me tungod kay ever since nagkakuyog mi ni Gov. og trabaho
+                                    adtong 2019, si Gov. Gwen has been really welcoming gyud sa akoa."
+                                </p>
+                                <footer data-aos="fade-up" data-aos-delay="600">– <cite>Hon. Carlo Jose Asas Martinez</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Call To Action Section -->
+
+
+ 
+        <!-- Recent Blog Posts Section -->
+        <section class="section">
+            <!-- Section Title -->
+            <div class="container section-heading text-center" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Posts</h2>
+                <p><span>Recent Event </span> <span class="sub-title">Posts</span></p>
+            </div>
+            <!-- End Section Title -->
+        
+            <div class="container-fluid blog">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <!-- Blog Item 1 -->
+                        <div class="col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="blog-item">
+                                <div class="blog-img" data-aos="zoom-in" data-aos-delay="300">
+                                    <img src="assets/img/posts/underwater-clean-up-drive.jpg" class="img-fluid rounded-top w-100"
+                                        alt="Underwater clean-up drive at Capitancillo Islet Marine Sanctuary">
+                                </div>
+                                <div class="blog-content rounded-bottom p-4 green">
+                                    <a href="post1.html" class="blog-heading d-inline-block mb-2">3rd Underwater Clean-up Drive to
+                                        Protect Capitancillo
+                                        Islet Marine Sanctuary Conducted</a>
+                                    <div class="blog-meta-info mb-3">
+                                        <span><i class="bi bi-person"></i> Bogo City Government</span>
+                                        <span><i class="bi bi-clock"></i> Sept 7, 2024</span>
+                                    </div>
+                                    <p>In the City's continued commitment to safeguard its rich marine biodiversity, the 3rd
+                                        Underwater Clean-up Drive
+                                        at the Capitancillo Islet Marine Sanctuary</p>
+                                    <a href="post1.html" class="fw-bold text-secondary">Read More <i
+                                            class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Item 2 -->
+                        <div class="col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="blog-item">
+                                <div class="blog-img" data-aos="zoom-in" data-aos-delay="500">
+                                    <img src="assets/img/posts/continues-incentives-for-seniors.jpg"
+                                        class="img-fluid rounded-top w-100"
+                                        alt="Celebration of 80th and 90th birthdays for senior citizens">
+                                </div>
+                                <div class="blog-content rounded-bottom p-4">
+                                    <a href="post2.html" class="blog-heading d-inline-block mb-2">City Continues Incentives for
+                                        Seniors celebrating 80th
+                                        and 90th Natal Day</a>
+                                    <div class="blog-meta-info mb-3">
+                                        <span><i class="bi bi-person"></i> Bogo City Government</span>
+                                        <span><i class="bi bi-clock"></i> Aug 30, 2024</span>
+                                    </div>
+                                    <p>The City of Bogo continues to honor senior citizens on their milestone birthdays. The
+                                        birthday honorees were
+                                        greeted with warm smiles and heartfelt congratulations</p>
+                                    <a href="post2.html" class="fw-bold text-secondary">Read More <i
+                                            class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Item 3 -->
+                        <div class="col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <div class="blog-item">
+                                <div class="blog-img" data-aos="zoom-in" data-aos-delay="700">
+                                    <img src="assets/img/posts/livestock-raisers-forum-highlights.jpg"
+                                        class="img-fluid rounded-top w-100"
+                                        alt="Livestock Raisers Forum discussing insurance and biosecurity">
+                                </div>
+                                <div class="blog-content rounded-bottom p-4">
+                                    <a href="post3.html" class="blog-heading d-inline-block mb-2">Livestock Raisers Forum Highlights
+                                        Insurance,
+                                        Biosecurity, and Feed Enhancers</a>
+                                    <div class="blog-meta-info mb-3">
+                                        <span><i class="bi bi-person"></i> Bogo City Government</span>
+                                        <span><i class="bi bi-clock"></i> May 25, 2024</span>
+                                    </div>
+                                    <p>A comprehensive Livestock Raisers Forum was hosted by the City Government of Bogo geared with
+                                        the City's aim at
+                                        addressing critical issues facing local livestock raisers.</p>
+                                    <a href="post3.html" class="fw-bold text-secondary">Read More <i
+                                            class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /Recent Blog Posts Section -->
+
+    </main>
+    <!-- Main Section -->
+    
+    
+    <!-- Footer Section -->
+    <footer>
+    
+        <div id="gwt-standard-footer"></div>
+        <script type="text/javascript">
+            (function (d, s, id) {
+                var js, gjs = d.getElementById('gwt-standard-footer');
+
+                js = d.createElement(s); js.id = id;
+                js.src = "//gwhs.i.gov.ph/gwt-footer/footer.js";
+                gjs.parentNode.insertBefore(js, gjs);
+            }(document, 'script', 'gwt-footer-jsdk'));
+        </script>
+    
+    </footer>
+    <!-- Footer Section -->
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-to-top" class="scroll-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+    <!-- Library JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
