@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap");
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+.html{
+    scroll-behavior: smooth;
+}
+:root {
+    --primary-font: "Lato", system-ui;
+    --heading-font: "Poppins", sans-serif;
+    --menu-font: "Source Sans Pro", sans-serif;
+}
+
+:root {
+    --base-bg: #ffffff;
+    --dark-bg: #000000;
+    --text-color: #333333;
+    --text-contrast: #ffffff;
+    --primary-bg: rgb(227, 248, 223);
+    --heading-color: #111111;
+    --highlight-color: #3dcc50;
+    --element-bg: #ffffff;
+    --navbar-bg: rgb(227, 248, 223);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: rgba(31, 38, 135, 0.37);
+}
+
+
+/*--------------------------------------------------------------
+# Base Styles
+--------------------------------------------------------------*/
+body {
+  color: var(--text-color);
+  background-color: var(--base-bg);
+  font-family: var(--primary-font);
+  padding-top: 4em;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--highlight-color), transparent 20%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Base styles */
+.navbar {
+  font-family: var(--menu-font);
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  z-index: 1050;
+}
+
+.navbar-brand {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: none;
+}
+
+.navbar-brand:hover {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-family: var(--menu-font);
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--highlight-color);
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: var(--highlight-color) !important;
+  /* Added !important to ensure it overrides other states */
+  border-bottom: 2px solid var(--highlight-color);
+}
+
+/* Dropdown Hover Behavior for Desktop */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  font-family: var(--menu-font);
+  background-color: var(--navbar-bg);
+  border: 1px solid var(--highlight-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.dropdown-item:hover {
+  background: var(--highlight-color);
+  color: var(--text-contrast);
+}
+
+/* Add styles for active dropdown items */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--highlight-color);
+  color: var(--text-contrast);
+}
+
+/* Ensure parent dropdown stays active when child is selected */
+.navbar-nav .dropdown.active>.nav-link {
+  font-weight: bold;
+  color: var(--highlight-color) !important;
+  border-bottom: 2px solid var(--highlight-color);
+}
+
+/* Glass Effect for Mobile Offcanvas */
+.offcanvas {
+  background-color: var(--navbar-bg);
+  transition: all var(--transition-fast);
+}
+
+.offcanvas.glass-effect {
+  background: var(--navbar-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+}
+
+.offcanvas-backdrop {
+  display: none !important;
+}
+
+.offcanvas-header,
+.offcanvas-body {
+  font-family: var(--primary-font);
+}
+
+.offcanvas .btn-close {
+  color: var(--text-color);
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown-menu {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.offcanvas-title {
+  color: var(--highlight-color) !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:focus {
+  outline: none;
+  /* Removes default browser outline */
+  font-weight: bold;
+  color: var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
+}
+
+/*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
+.hero-banner-container {
+  position: relative;
+  height: clamp(300px, 50vh, 600px);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-banner-container img {
+  position: fixed;
+  /* Changed from absolute to fixed */
+  top: 0;
+  /* Added top positioning */
+  left: 0;
+  /* Added left positioning */
+  width: 100%;
+  height: 100vh;
+  /* Changed to 100vh for full viewport height */
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+  z-index: -2;
+  /* Added to keep image behind content */
+}
+
+.hero-banner-container:hover img {
+  transform: scale(1.05);
+}
+
+.banner-content {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.banner-text {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+.banner-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--text-contrast);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner-container {
+    height: clamp(200px, 30vh, 400px);
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .hero-banner-container img {
+    position: fixed;
+    background-attachment: scroll;
+    /* Added for better mobile support */
+  }
+
+  .banner-title {
+    font-size: 26px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner-container {
+    height: clamp(200px, 30vh, 400px);
+    margin: 0;
+    /* Removed the margin */
+    border-radius: 0;
+    /* Remove border radius on mobile */
+  }
+
+  .banner-title {
+    padding: 12px 20px;
+  }
+}
+
+
+/* content title */
+.Building-content{
+    height: auto;
+    width: auto;
+    background-color: #ffffff;
+}
+
+.title-content{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.title-content h3{
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: #3dcc50;
+}
+
+
+/* for choices building permit requirements */
+.container-choices {
+  padding-top: 3%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, #e8f7e8, #ffffff);
+  border: 1px solid #d4f0d4;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-family: var(--heading-font);
+  color: var(--highlight-color);
+}
+
+.steps-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: var(--element-bg);
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.steps-container h3 {
+  font-size: 26px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: linear-gradient(to right, #e8f7e8, #ffffff);
+  color: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+}
+
+.text-container {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.text-container h3 {
+  color: var(--highlight-color);
+}
+
+
+.image-container {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 100%; /* Ensures equal height */
+}
+
+.sliced-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  transition: clip-path 0.3s ease-in-out;
+}
+
+.sliced-image:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: scale(1);
+}
+
+/* reverse container*/
+.reversed-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(to left, #e8f7e8, #ffffff);
+  color: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: 400px;
+  width: 100%;
+}
+
+.image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 100%; 
+}
+
+
+.reversed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+  transition: clip-path 0.3s ease-in-out;
+}
+
+.reversed-image:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.text-wrapper {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.text-wrapper h3 {
+  font-size: 24px;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.text-wrapper p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .inner-container, 
+  .reversed-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .text-container, 
+  .text-wrapper {
+    text-align: center;
+  }
+
+ .image-container, 
+  .image-wrapper {
+    order: -1; 
+    max-width: 100%;
+    height: auto; /* Adjusts height for small screens */
+  }
+
+  .sliced-image, 
+  .reversed-image {
+    width: 90%; 
+    height: auto; 
+    max-width: 300px; /* Optional: limit maximum width */
+    clip-path: none;
+  }
+
+  .text-container p, 
+  .text-wrapper p {
+    font-size: 16px; 
+  }
+
+
+
+  
+}
+
+@media screen and (max-width: 480px) {
+  .text-container h3, 
+  .text-wrapper h3 {
+    font-size: 20px;
+  }
+
+  .text-container p, 
+  .text-wrapper p {
+    font-size: 14px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--highlight-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-to-top i {
+  font-size: 24px;
+  color: var(--text-contrast);
+  line-height: 0;
+}
+
+.scroll-to-top:hover {
+  background-color: color-mix(in srgb, var(--highlight-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-to-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}

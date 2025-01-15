@@ -1,0 +1,24 @@
+/* Adjust the width of the table header */
+.policies-table-header th,
+.policies-table-header td {
+    width: 33%;
+    /* Adjust percentage as needed */
+}
+
+.policies-table-header th:first-child,
+.policies-table-header td:first-child {
+    width: 11%;
+    /* Set narrower width for the first column */
+}
+
+.policies-table-header th:nth-child(2),
+.policies-table-header td:nth-child(2) {
+    width: 70%;
+    /* Wider for the second column */
+}
+
+.policies-table-header th:last-child,
+.policies-table-header td:last-child {
+    width: 19%;
+    /* Remaining width for the last column */
+}
